@@ -7,7 +7,7 @@ use Catalyst::Log;
 
 __PACKAGE__->mk_classdata($_) for qw/_config log/;
 
-our $VERSION = '4.21';
+our $VERSION = '4.23';
 our @ISA;
 
 =head1 NAME
@@ -176,6 +176,17 @@ sub import {
     $caller->log->debug(qq/Loaded engine "$engine"/) if $caller->debug;
 }
 
+=head1 SUPPORT
+
+IRC:
+
+    Join #catalyst on irc.perl.org.
+
+Mailing-Lists:
+
+    http://lists.rawmode.org/mailman/listinfo/catalyst
+    http://lists.rawmode.org/mailman/listinfo/catalyst-dev
+    
 =head1 SEE ALSO
 
 L<Catalyst::Manual>, L<Catalyst::Test>, L<Catalyst::Request>,

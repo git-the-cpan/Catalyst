@@ -61,7 +61,7 @@ sub import {
     my $self = shift;
     $class = shift;
     $class->require;
-    if ( ( caller(0) )[1] eq '-e' ) {
+    unless ( $INC{'Test/Builder.pm'} ) {
         die qq/Couldn't load "$class", "$@"/ if $@;
     }
     my $caller = caller(0);
